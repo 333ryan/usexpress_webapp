@@ -24,3 +24,6 @@ build/
 *.iml
 .idea/
 
+#firestore key
+firestore_key.json
+
