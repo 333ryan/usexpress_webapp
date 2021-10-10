@@ -14,3 +14,7 @@ def start():
 def firestore():
     doc_ref = user_collection.document("n8tegreoHLQQp2pkL3UkURy8EBf2").get()
     return f"User Data: {doc_ref.to_dict()}"
+
+@views.route('/react')
+def react():
+    return "REACT PAGE CONTENTS"
