@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}REEEEEAAAL HOME{% endblock %}
+{% block h1 %}TESTING HTML BLOCKS{% endblock %}
+{% block content %}
+<h1>This is the LOGIN page</h1>
+<form method="POST">
+    <h3 align="center">Login</h3>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{{ text }}
+{% endblock %}
