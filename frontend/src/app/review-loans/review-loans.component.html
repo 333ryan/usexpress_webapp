@@ -1,0 +1,27 @@
+<div class="loans-div">
+  <header>
+    <h2>Loans in review</h2>
+  </header>
+  <div class="table">
+    <table class="loan-table">
+      <thead>
+      <tr class="header-row">
+        <th>Date Submitted</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Loan Type</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let loan of loans">
+        <td>{{loan.dateSubmitted}}</td>
+        <td>{{loan.name}}</td>
+        <td>{{loan.phone}}</td>
+        <td>{{loan.email}}</td>
+        <td>{{loan.loanType}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { ReviewLoansComponent } from './review-loans/review-loans.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    ReviewLoansComponent
   ],
   imports: [
     BrowserModule,

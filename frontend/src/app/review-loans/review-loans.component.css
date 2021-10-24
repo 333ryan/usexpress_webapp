@@ -1,0 +1,34 @@
+table.loan-table {
+  border: 1px black;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  height: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #2c3a41;
+  color: white;
+  text-align: left;
+}
+
+tr:not(.header-row):hover {
+  background-color: lightyellow;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;;
+}
+
+header.center {
+  align-content: center;
+}
+
+
+
