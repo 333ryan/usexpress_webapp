@@ -5,9 +5,8 @@ h1 {
   font-size: 250%;
 }
 h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+  font-family: Zen Kaku Gothic Antique;
+  font-size: 18px
 }
 body {
   margin: 2em;
@@ -18,5 +17,10 @@ body, input[type="text"], button {
 }
 /* everywhere else */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cabin, Helvetica, sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Zen+Kaku+Gothic+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
