@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { ReviewLoansComponent } from './review-loans/review-loans.component';
+import { ApprovedLoansComponent } from './approved-loans/approved-loans.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReviewLoansComponent } from './review-loans/review-loans.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    ReviewLoansComponent
+    ReviewLoansComponent,
+    ApprovedLoansComponent
   ],
   imports: [
     BrowserModule,
