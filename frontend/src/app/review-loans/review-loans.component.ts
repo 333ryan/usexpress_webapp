@@ -15,7 +15,23 @@ export class ReviewLoansComponent implements OnInit {
       {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
         , email: 'steve@gmail.com', },
       {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
-        , email: 'bob@gmail.com', }
+        , email: 'bob@gmail.com', },
+      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
+        , email: 'steve@gmail.com', },
+      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
+        , email: 'bob@gmail.com', },
+      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
+        , email: 'steve@gmail.com', },
+      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
+        , email: 'bob@gmail.com', },
+      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
+        , email: 'steve@gmail.com', },
+      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
+        , email: 'bob@gmail.com', },
+      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
+        , email: 'steve@gmail.com', },
+      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
+        , email: 'bob@gmail.com', },
     ]
   }
 

@@ -1,15 +1,38 @@
-table.loan-table {
+.review-loans {
+  background-color: white;
+  border-radius: 3mm;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-bar {
+  border-top-left-radius: 3mm;
+  border-top-right-radius: 3mm;
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  padding: 0px 20px;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.table {
+  padding: 20px 20px;
+}
+
+.loan-table {
   border: 1px black;
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 th, td {
-  height: 20px;
-  padding: 20px;
+  height: 10px;
+  padding: 10px 20px;
   border-bottom: 1px solid #ddd;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
 th {
@@ -18,17 +41,24 @@ th {
   text-align: left;
 }
 
-tr:not(.header-row):hover {
+tr:not(.table-header):hover {
   background-color: lightyellow;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;;
+  background-color: #f2f2f2;
 }
 
-header.center {
-  align-content: center;
+.review-button {
+  display: inline-block;
+  padding: 10px;
+  background-color: forestgreen;
+  text-decoration: none;
+  color: white;
+  border-radius: 3mm;
+  font-size: 10px;
 }
+
 
 
 
