@@ -16,6 +16,13 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { ReviewLoansComponent } from './review-loans/review-loans.component';
 import { ApprovedLoansComponent } from './approved-loans/approved-loans.component';
 
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { PdfViewComponent } from './pdf-view/pdf-view.component';
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +33,8 @@ import { ApprovedLoansComponent } from './approved-loans/approved-loans.componen
     DashboardComponent,
     HeroSearchComponent,
     ReviewLoansComponent,
-    ApprovedLoansComponent
+    ApprovedLoansComponent,
+    PdfViewComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,9 @@ import { ApprovedLoansComponent } from './approved-loans/approved-loans.componen
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
-    )
+    ),
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'us-express-finance'),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
