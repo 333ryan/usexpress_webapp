@@ -17,7 +17,7 @@
       <tbody>
       <tr *ngFor="let loan of loans" [ngStyle]="{'color': 'black', 'font-size': '14px'}">
         <td>{{loan.dateSubmitted}}</td>
-        <td>{{loan.name}}</td>
+        <td>{{loan.firstName + " " + loan.lastName}}</td>
         <td>{{loan.phone}}</td>
         <td>{{loan.email}}</td>
         <td>{{loan.loanType}}</td>

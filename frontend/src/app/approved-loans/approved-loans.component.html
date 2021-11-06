@@ -1,1 +1,32 @@
-<p>approved-loans works!</p>
+<div class="review-loans">
+  <header class="top-bar">
+    <h2>Approved Loans</h2>
+  </header>
+  <div class="table">
+    <table class="loan-table">
+      <thead>
+      <tr class="table-header">
+        <th>Date Approved</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Loan Type</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let loan of loans" [ngStyle]="{'color': 'black', 'font-size': '14px'}">
+        <td>{{loan.dateSubmitted}}</td>
+        <td>{{loan.name}}</td>
+        <td>{{loan.phone}}</td>
+        <td>{{loan.email}}</td>
+        <td>{{loan.loanType}}</td>
+        <td>
+          <a routerLink="#" class="review-button">VIEW</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

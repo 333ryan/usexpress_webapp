@@ -4,13 +4,15 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 import { ReviewLoansComponent } from "./review-loans/review-loans.component";
+import {ApprovedLoansComponent} from "./approved-loans/approved-loans.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'review-loans', component: ReviewLoansComponent }
+  { path: 'review-loans', component: ReviewLoansComponent },
+  { path: 'approved-loans', component: ApprovedLoansComponent }
 ];
 
 @NgModule({

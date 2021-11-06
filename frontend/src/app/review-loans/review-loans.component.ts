@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {FirestoreService} from "../firestore.service";
+import {MessagesService} from "../messages.service";
+import {AngularFirestoreCollection} from "@angular/fire/compat/firestore";
+import {LoanListing} from "../loan-listing";
+import {Observable} from "rxjs";
+import {catchError} from "rxjs/operators";
 
 @Component({
   selector: 'app-review-loans',
@@ -7,34 +13,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewLoansComponent implements OnInit {
 
-  loans: Array<any> = [];
-  constructor() { }
+  dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  loans: Array<LoanListing> = [];
+  constructor(private fireService:FirestoreService, private messages: MessagesService) { }
 
   ngOnInit(): void {
-    this.loans = [
-      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
-        , email: 'steve@gmail.com', },
-      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
-        , email: 'bob@gmail.com', },
-      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
-        , email: 'steve@gmail.com', },
-      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
-        , email: 'bob@gmail.com', },
-      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
-        , email: 'steve@gmail.com', },
-      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
-        , email: 'bob@gmail.com', },
-      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
-        , email: 'steve@gmail.com', },
-      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
-        , email: 'bob@gmail.com', },
-      {dateSubmitted: '10/23/2021, 3:40pm', name: 'steve', loanType: 'Auto', phone: '4044044040'
-        , email: 'steve@gmail.com', },
-      {dateSubmitted: '10/20/2021, 9:40pm', name: 'bob', loanType: 'Business', phone: '6786786786'
-        , email: 'bob@gmail.com', },
-    ]
+    this.getLoans();
   }
 
-
-
+  getLoans() {
+    this.fireService.getLoansCollection().subscribe(res => {
+      this.loans = res.map(e => {
+        let loanList = {
+          docID: e.payload.doc.id,
+          firstName: e.payload.doc.get('firstName'),
+          lastName: e.payload.doc.get('lastName'),
+          dateSubmitted: e.payload.doc.get('_submittedOn').toDate()
+            .toLocaleDateString('en-US', this.dateOptions),
+          loanType: e.payload.doc.get('_loanType'),
+          phone: e.payload.doc.get('maritalStatus'),
+          email: e.payload.doc.get('maritalStatus'),
+        };
+        return loanList as LoanListing;
+      })
+    })
+  }
 }
