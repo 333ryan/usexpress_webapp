@@ -21,8 +21,7 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { PdfViewComponent } from './pdf-view/pdf-view.component';
-
-
+import {NgxExtendedPdfViewerModule} from "ngx-extended-pdf-viewer";
 
 @NgModule({
   declarations: [
@@ -45,7 +44,8 @@ import { PdfViewComponent } from './pdf-view/pdf-view.component';
       InMemoryDataService, {dataEncapsulation: false}
     ),
     AngularFireModule.initializeApp(environment.firebaseConfig, 'us-express-finance'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgxExtendedPdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
