@@ -26,4 +26,9 @@ build/
 
 #firestore key
 firestore_key.json
+firestore.rules
+firebase.json
+firestore.indexes.json
+storage.rules
+.firebaserc
 
